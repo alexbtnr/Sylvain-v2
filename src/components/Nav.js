@@ -39,6 +39,34 @@ const Nav = ({ hrefList, textList }) => {
   );
 };
 
-const StyledNav = styled(motion.nav)``;
+const StyledNav = styled(motion.nav)`
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    li {
+      margin-left: 2rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    li:after {
+      display: block;
+      content: "";
+      border-bottom: solid 2px #000;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
+    li:hover:after {
+      opacity: 1;
+    }
+  }
+`;
 
 export default Nav;
