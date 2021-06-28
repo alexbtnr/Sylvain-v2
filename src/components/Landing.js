@@ -1,11 +1,39 @@
+import { motion } from "framer-motion";
 import React from "react";
+import styled from "styled-components";
+import Logo from "./Logo";
+import Nav from "./Nav";
 
 const Landing = () => {
   return (
-    <div>
-      <h2>landing</h2>
-    </div>
+    <StyledLanding id='showcase'>
+      <div className='container'>
+        <header className='header'>
+          {/* <Logo /> */}
+          <Nav
+            hrefList={[
+              "#about",
+              "#stories",
+              "#gallery",
+              "#carousel",
+              "#video",
+              "#contact",
+            ]}
+            textList={[
+              "About",
+              "Stories",
+              "Gallery",
+              "Accomodation",
+              "Video",
+              "Contact",
+            ]}
+          />
+        </header>
+      </div>
+    </StyledLanding>
   );
 };
+
+const StyledLanding = styled(motion.div)``;
 
 export default Landing;
