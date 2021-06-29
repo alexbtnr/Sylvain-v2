@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { v4 as uuid } from "uuid";
+import { formInputHover, formButtonHover } from "../animations";
 
 const LandingForm = ({ formList, setFormList }) => {
   const [checkIn, setCheckIn] = useState("");
@@ -48,11 +49,25 @@ const LandingForm = ({ formList, setFormList }) => {
       {form ? (
         <SubmittedForm>
           <p>Thank you! Your booking details have been received!</p>
-          <button onClick={() => setForm(null)}>
+          <motion.button
+            variants={formButtonHover}
+            whileHover='hover'
+            transition={{ duration: 0.5 }}
+            initial='initial'
+            onClick={() => setForm(null)}
+          >
             Make another reservation!
-          </button>
+          </motion.button>
           <Link to='/reservations' id='secondary-reservations-wrapper'>
-            <button id='secondary-reservations'>Reservations</button>
+            <motion.button
+              variants={formButtonHover}
+              whileHover='hover'
+              transition={{ duration: 0.5 }}
+              initial='initial'
+              id='secondary-reservations'
+            >
+              Reservations
+            </motion.button>
           </Link>
         </SubmittedForm>
       ) : (
@@ -60,7 +75,11 @@ const LandingForm = ({ formList, setFormList }) => {
           <div className='inputs-wrap'>
             <div className='form-group'>
               <label htmlFor='check-in'>Check-in</label>
-              <input
+              <motion.input
+                variants={formInputHover}
+                whileHover='hover'
+                transition={{ duration: 0.5 }}
+                initial='initial'
                 type='text'
                 id='check-in'
                 name='check-in'
@@ -72,7 +91,11 @@ const LandingForm = ({ formList, setFormList }) => {
             </div>
             <div className='form-group'>
               <label htmlFor='check-out'>Check-out</label>
-              <input
+              <motion.input
+                variants={formInputHover}
+                whileHover='hover'
+                transition={{ duration: 0.5 }}
+                initial='initial'
                 type='text'
                 id='check-out'
                 name='check-out'
@@ -86,7 +109,11 @@ const LandingForm = ({ formList, setFormList }) => {
               <label id='hikers-label' htmlFor='hikers'>
                 Hikers
               </label>
-              <input
+              <motion.input
+                variants={formInputHover}
+                whileHover='hover'
+                transition={{ duration: 0.5 }}
+                initial='initial'
                 type='text'
                 id='hikers'
                 name='hikers'
@@ -97,12 +124,28 @@ const LandingForm = ({ formList, setFormList }) => {
               />
             </div>
           </div>
-          <input type='submit' className='form-button' value='BOOK NOW' />
+          <motion.input
+            variants={formButtonHover}
+            whileHover='hover'
+            transition={{ duration: 0.5 }}
+            initial='initial'
+            type='submit'
+            className='form-button'
+            value='BOOK NOW'
+          />
           {formList.length > 0 && (
             <Link id='reservations-wrapper' to='/reservations'>
-              <button type='button' className='form-button' id='reservations'>
+              <motion.button
+                variants={formButtonHover}
+                whileHover='hover'
+                transition={{ duration: 0.5 }}
+                initial='initial'
+                type='button'
+                className='form-button'
+                id='reservations'
+              >
                 Reservations
-              </button>
+              </motion.button>
             </Link>
           )}
         </StyledForm>
@@ -153,6 +196,12 @@ const StyledForm = styled(motion.form)`
     cursor: pointer;
     color: #fff;
   }
+  .form-button#reservations {
+    border-left: none;
+  }
+  #reservations-wrapper {
+    text-decoration: none;
+  }
 
   @media (max-width: 800px) {
     display: block;
@@ -187,6 +236,9 @@ const StyledForm = styled(motion.form)`
       border-top: none;
       display: block;
       width: 100%;
+    }
+    button.form-button#reservations {
+      border-left: 2px solid #fff;
     }
   }
 `;
