@@ -2,6 +2,7 @@ import React from "react";
 import Landing from "../components/Landing";
 import About from "../components/About";
 import InfoImage from "../components/InfoImage";
+import PeopleAndStories from "../components/PeopleAndStories";
 
 const Home = ({ formList, setFormList }) => {
   return (
@@ -9,6 +10,7 @@ const Home = ({ formList, setFormList }) => {
       <Landing formList={formList} setFormList={setFormList} />
       <About />
       <InfoImage />
+      <PeopleAndStories />
     </div>
   );
 };
