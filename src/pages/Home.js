@@ -14,7 +14,7 @@ const Home = ({ formList, setFormList }) => {
       <Landing formList={formList} setFormList={setFormList} />
       <About />
       <InfoImage />
-      <PeopleAndStories />
+      {/* <PeopleAndStories /> */}
       <PhotoGallery />
       <Carousel />
       <Video />
