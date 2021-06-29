@@ -29,7 +29,7 @@ const StyledAbout = styled(motion.section)`
   }
 
   @media (max-width: 800px) {
-    min-height: 75rem;
+    min-height: 70rem;
   }
 `;
 
