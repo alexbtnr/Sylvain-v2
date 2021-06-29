@@ -26,6 +26,16 @@ const GlobalStyles = createGlobalStyle`
       object-fit: cover;
     }
   }
+
+  @media (max-width: 800px) {
+    html,body {
+      overflow-x: hidden;
+
+    }
+    body {
+      width: 100%;
+    }
+  }
 `;
 
 export default GlobalStyles;

@@ -100,6 +100,12 @@ const StyledVideo = styled.section`
       }
     }
   }
+
+  @media (max-width: 800px) {
+    .content {
+      min-width: 80%;
+    }
+  }
 `;
 
 export default Video;
