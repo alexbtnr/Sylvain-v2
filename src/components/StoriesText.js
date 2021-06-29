@@ -31,6 +31,10 @@ const StyledStoriesText = styled(motion.div)`
   p {
     font-size: 1.1rem;
   }
+
+  @media (max-width: 800px) {
+    padding-bottom: 2rem;
+  }
 `;
 
 export default StoriesText;

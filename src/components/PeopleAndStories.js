@@ -63,6 +63,22 @@ const StyledStories = styled(motion.div)`
       width: 90%;
     }
   }
+
+  @media (max-width: 800px) {
+    .container {
+      display: block;
+      text-align: center;
+
+      .grid-container {
+        display: block;
+        margin: 0 auto;
+
+        div {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
 `;
 
 export default PeopleAndStories;
