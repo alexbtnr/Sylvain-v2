@@ -126,6 +126,26 @@ const StyledGallery = styled(motion.section)`
       align-self: center;
     }
   }
+
+  @media (max-width: 800px) {
+    .container {
+      h4 {
+        position: static;
+        text-align: center;
+        padding-bottom: 2rem;
+      }
+
+      .images-container {
+        grid-template-columns: 1fr;
+
+        div.image-wrapper {
+          width: 80%;
+          margin: 0 auto;
+          height: 30rem;
+        }
+      }
+    }
+  }
 `;
 
 export default PhotoGallery;
