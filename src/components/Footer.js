@@ -219,11 +219,7 @@ const StyledFooter = styled.footer`
   }
 
   @media (max-width: 800px) {
-    min-height: 30rem;
-    bottom: 0;
     .container {
-      /* max-width: 20%; */
-      /* height: 100%; */
       .flex-container {
         flex-direction: column;
         align-items: center;

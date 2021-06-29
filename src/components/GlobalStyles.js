@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   @media (max-width: 800px) {
+    
     html,body {
       overflow-x: hidden;
 
