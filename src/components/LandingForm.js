@@ -87,6 +87,11 @@ const LandingForm = () => {
             </div>
           </div>
           <input type='submit' className='form-button' value='BOOK NOW' />
+          <Link id='reservations-wrapper' to='/reservations'>
+            <button type='button' className='form-button' id='reservations'>
+              Reservations
+            </button>
+          </Link>
         </StyledForm>
       )}
     </>
@@ -135,6 +140,42 @@ const StyledForm = styled(motion.form)`
     cursor: pointer;
     color: #fff;
   }
+
+  @media (max-width: 800px) {
+    display: block;
+
+    .inputs-wrap {
+      display: flex;
+
+      .form-group {
+        align-items: center;
+
+        #hikers,
+        #hikers-label {
+          border-right: 2px solid #fff;
+        }
+
+        label {
+          background: #444;
+          min-width: 6rem;
+          font-size: 0.8rem;
+          text-align: center;
+          padding: 0.5rem 0;
+          border: 2px solid #fff;
+          border-bottom: none;
+          border-right: none;
+        }
+        input {
+          max-width: 6rem;
+        }
+      }
+    }
+    .form-button {
+      border-top: none;
+      display: block;
+      width: 100%;
+    }
+  }
 `;
 
 const SubmittedForm = styled(motion.div)`
@@ -165,6 +206,11 @@ const SubmittedForm = styled(motion.div)`
   }
   #secondary-reservations-wrapper {
     width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 1rem;
+    width: 80%;
   }
 `;
 

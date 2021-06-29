@@ -23,6 +23,10 @@ const StyledArrow = styled(motion.div)`
     color: #fff;
     cursor: pointer;
   }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export default ScrollArrow;

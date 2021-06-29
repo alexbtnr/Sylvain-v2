@@ -66,6 +66,14 @@ const StyledLanding = styled(motion.div)`
       text-align: center;
     }
   }
+
+  @media (max-width: 800px) {
+    .container {
+      .main-content {
+        margin-top: 3rem;
+      }
+    }
+  }
 `;
 
 export default Landing;
