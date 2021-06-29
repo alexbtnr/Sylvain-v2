@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background: #cfcfff;
+    /* background: red; */
 
     div.container {
       max-width: 1280px;
