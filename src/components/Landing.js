@@ -8,7 +8,7 @@ import MainTitle from "./MainTitle";
 import LandingForm from "./LandingForm";
 import ScrollArrow from "./ScrollArrow";
 
-const Landing = () => {
+const Landing = ({ formList, setFormList }) => {
   return (
     <StyledLanding id='showcase'>
       <div className='container'>
@@ -35,7 +35,7 @@ const Landing = () => {
         </header>
         <div className='main-content'>
           <MainTitle />
-          <LandingForm />
+          <LandingForm formList={formList} setFormList={setFormList} />
           <ScrollArrow />
         </div>
       </div>

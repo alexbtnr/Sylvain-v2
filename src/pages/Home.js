@@ -1,10 +1,10 @@
 import React from "react";
 import Landing from "../components/Landing";
 
-const Home = () => {
+const Home = ({ formList, setFormList }) => {
   return (
     <div>
-      <Landing />
+      <Landing formList={formList} setFormList={setFormList} />
     </div>
   );
 };

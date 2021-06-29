@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Pages
 import Home from "./pages/Home";
@@ -11,12 +11,35 @@ import { Route, Switch, useLocation } from "react-router-dom";
 
 function App() {
   const location = useLocation();
+  const [formList, setFormList] = useState([]);
+
+  useEffect(() => {
+    getLocalReservations();
+  }, []);
+
+  useEffect(() => {
+    saveLocalReservations();
+  }, [formList]);
+
+  const saveLocalReservations = () => {
+    localStorage.setItem("reservations", JSON.stringify(formList));
+  };
+
+  const getLocalReservations = () => {
+    if (localStorage.getItem("reservations") === null) {
+      localStorage.setItem("reservations", JSON.stringify([]));
+    } else {
+      let localReservations = JSON.parse(localStorage.getItem("reservations"));
+      setFormList(localReservations);
+    }
+  };
+
   return (
     <div className='App'>
       <GlobalStyles />
       <Switch location={location} key={location.pathname}>
         <Route path='/' exact>
-          <Home />
+          <Home formList={formList} setFormList={setFormList} />
         </Route>
       </Switch>
     </div>

@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { v4 as uuid } from "uuid";
 
-const LandingForm = () => {
+const LandingForm = ({ formList, setFormList }) => {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [hikers, setHikers] = useState("");
@@ -26,6 +27,16 @@ const LandingForm = () => {
       checkOut,
       hikers,
     });
+
+    setFormList([
+      ...formList,
+      {
+        checkIn,
+        checkOut,
+        hikers,
+        id: uuid(),
+      },
+    ]);
 
     setCheckIn("");
     setCheckOut("");
@@ -87,11 +98,13 @@ const LandingForm = () => {
             </div>
           </div>
           <input type='submit' className='form-button' value='BOOK NOW' />
-          <Link id='reservations-wrapper' to='/reservations'>
-            <button type='button' className='form-button' id='reservations'>
-              Reservations
-            </button>
-          </Link>
+          {formList.length > 0 && (
+            <Link id='reservations-wrapper' to='/reservations'>
+              <button type='button' className='form-button' id='reservations'>
+                Reservations
+              </button>
+            </Link>
+          )}
         </StyledForm>
       )}
     </>
