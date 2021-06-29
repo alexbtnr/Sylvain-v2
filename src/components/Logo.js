@@ -6,7 +6,12 @@ import logo2 from "../img/logo2.png";
 const Logo = () => {
   return (
     <StyledLogo>
-      <img src={logo2} alt='Sylvain' />
+      <motion.img
+        whileHover={{ rotate: 180 }}
+        transition={{ duration: 0.8, type: "spring", bounce: "0.5" }}
+        src={logo2}
+        alt='Sylvain'
+      />
     </StyledLogo>
   );
 };
