@@ -116,3 +116,67 @@ export const storiesAnimationX = {
     },
   },
 };
+
+export const galleryAnimationWrapper = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+export const galleryTitleAnimationX = {
+  initial: {
+    scale: 0.2,
+    x: -200,
+  },
+  animate: {
+    scale: 1,
+    x: 0,
+    transition: {
+      duration: 0.55,
+      type: "spring",
+      bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const galleryAnimationX = {
+  initial: {
+    scale: 0.2,
+    opacity: 0,
+    x: -2000,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.55,
+      type: "spring",
+      bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const galleryAnimationY = {
+  initial: {
+    scale: 0.2,
+    opacity: 0,
+    y: 500,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.55,
+      type: "spring",
+      bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
