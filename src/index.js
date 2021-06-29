@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import SimpleReactLightbox from "simple-react-lightbox";
 import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <SimpleReactLightbox>
+      <Router>
+        <App />
+      </Router>
+    </SimpleReactLightbox>
   </React.StrictMode>,
   document.getElementById("root")
 );

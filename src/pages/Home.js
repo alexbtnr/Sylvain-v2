@@ -3,6 +3,7 @@ import Landing from "../components/Landing";
 import About from "../components/About";
 import InfoImage from "../components/InfoImage";
 import PeopleAndStories from "../components/PeopleAndStories";
+import PhotoGallery from "../components/PhotoGallery";
 
 const Home = ({ formList, setFormList }) => {
   return (
@@ -11,6 +12,7 @@ const Home = ({ formList, setFormList }) => {
       <About />
       <InfoImage />
       <PeopleAndStories />
+      <PhotoGallery />
     </div>
   );
 };
