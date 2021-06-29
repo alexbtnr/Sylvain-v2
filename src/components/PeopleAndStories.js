@@ -33,14 +33,14 @@ const PeopleAndStories = () => {
           animate={controls}
           ref={element}
         >
-          <motion.div variants={storiesAnimationX}>
+          <motion.div variants={storiesAnimationY}>
             <PhotoTextCard
               img={hikerPuppy}
               paragraph={`"A Golden Retriever Puppy approves of Sylvain's services"`}
               title='Golden Retriever Puppy'
             />
           </motion.div>
-          <motion.div variants={storiesAnimationX}>
+          <motion.div variants={storiesAnimationY}>
             <PhotoTextCard
               img={hikerMan3}
               paragraph='"Not all those who wander are lost."'
