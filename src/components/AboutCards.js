@@ -50,6 +50,24 @@ const StyledCards = styled(motion.div)`
     font-size: 1.5rem;
     font-weight: lighter;
   }
+
+  @media (max-width: 800px) {
+    display: block;
+    margin-bottom: 15rem;
+
+    div {
+      background: #000;
+      padding: 2rem;
+      border: 1px solid #fff;
+      width: 90%;
+      margin: 0 auto 2rem;
+
+      i,
+      p {
+        padding-bottom: 1rem;
+      }
+    }
+  }
 `;
 
 export default AboutCards;

@@ -33,6 +33,20 @@ const StyledText = styled(motion.div)`
     font-weight: lighter;
     margin-bottom: 2rem;
   }
+
+  @media (max-width: 800px) {
+    display: block;
+    margin-top: 16rem;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
 `;
 
 export default AboutText;

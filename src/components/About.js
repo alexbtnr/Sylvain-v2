@@ -27,6 +27,10 @@ const StyledAbout = styled(motion.section)`
     justify-content: space-evenly;
     height: 100%;
   }
+
+  @media (max-width: 800px) {
+    min-height: 75rem;
+  }
 `;
 
 export default About;
