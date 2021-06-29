@@ -5,6 +5,7 @@ import InfoImage from "../components/InfoImage";
 import PeopleAndStories from "../components/PeopleAndStories";
 import PhotoGallery from "../components/PhotoGallery";
 import Carousel from "../components/Carousel";
+import Video from "../components/Video";
 
 const Home = ({ formList, setFormList }) => {
   return (
@@ -15,6 +16,7 @@ const Home = ({ formList, setFormList }) => {
       <PeopleAndStories />
       <PhotoGallery />
       <Carousel />
+      <Video />
     </div>
   );
 };
