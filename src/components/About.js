@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
+import AboutText from "./AboutText";
 
 const About = () => {
   return (
     <StyledAbout id='about'>
-      <div className='container'>about lmao</div>
+      <div className='container'>
+        <AboutText />
+      </div>
     </StyledAbout>
   );
 };
@@ -15,7 +18,6 @@ const StyledAbout = styled(motion.section)`
   color: #fff;
   width: 100%;
   height: 90vh;
-
   .container {
     display: flex;
     flex-direction: column;
