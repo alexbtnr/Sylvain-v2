@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
+import AboutCards from "./AboutCards";
 import AboutText from "./AboutText";
 
 const About = () => {
@@ -8,6 +9,7 @@ const About = () => {
     <StyledAbout id='about'>
       <div className='container'>
         <AboutText />
+        <AboutCards />
       </div>
     </StyledAbout>
   );
