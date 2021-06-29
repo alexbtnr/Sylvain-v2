@@ -73,3 +73,46 @@ export const cardsParagraphAnimation = {
     },
   },
 };
+
+export const storiesAnimationWrapper = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.55,
+    },
+  },
+};
+
+export const storiesAnimationY = {
+  initial: {
+    opacity: 0,
+    y: 200,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.35,
+      type: "tween",
+      // bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const storiesAnimationX = {
+  initial: {
+    opacity: 0,
+    x: 200,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.35,
+      type: "tween",
+      // bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
