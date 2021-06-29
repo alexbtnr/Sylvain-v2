@@ -4,6 +4,9 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import backgroundForest from "../img/backgroundForest.jpg";
+import MainTitle from "./MainTitle";
+import LandingForm from "./LandingForm";
+import ScrollArrow from "./ScrollArrow";
 
 const Landing = () => {
   return (
@@ -30,6 +33,11 @@ const Landing = () => {
             ]}
           />
         </header>
+        <div className='main-content'>
+          <MainTitle />
+          <LandingForm />
+          <ScrollArrow />
+        </div>
       </div>
     </StyledLanding>
   );
@@ -47,6 +55,15 @@ const StyledLanding = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 6rem;
+      text-align: center;
     }
   }
 `;
