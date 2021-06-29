@@ -6,7 +6,10 @@ const ScrollArrow = ({ hrefCheck }) => {
   return (
     <StyledArrow>
       <a href={hrefCheck ? "#contact" : "#about"}>
-        <i className='las la-arrow-down la-2x'></i>
+        <motion.i
+          whileHover={{ scale: 1.1 }}
+          className='las la-arrow-down la-2x'
+        ></motion.i>
       </a>
     </StyledArrow>
   );
