@@ -180,3 +180,67 @@ export const galleryAnimationY = {
     },
   },
 };
+
+export const contactTextAnimationWrapper = {
+  initial: {},
+  animate: {
+    transition: {
+      staggerChildren: 0.35,
+    },
+  },
+};
+
+export const contactAnimationX = {
+  initial: {
+    opacity: 0,
+    x: -2000,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1.55,
+      // type: "tween",
+      type: "spring",
+      bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const contactAnimation_X = {
+  initial: {
+    opacity: 0,
+    x: 2000,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1.55,
+      // type: "tween",
+      type: "spring",
+      bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const contactAnimationY = {
+  initial: {
+    scale: 0.2,
+    opacity: 0,
+    y: 500,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.55,
+      type: "spring",
+      bounce: 0.25,
+      ease: "easeInOut",
+    },
+  },
+};
