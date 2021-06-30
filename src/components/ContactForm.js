@@ -35,12 +35,8 @@ const ContactForm = () => {
           Stress
         </motion.h2>
       </motion.div>
-      <form
-        name='contact'
-        method='POST'
-        data-netlify='true'
-        className='contact-form'
-      >
+      <form name='contact' method='POST' className='contact-form'>
+        <input type='hidden' name='form-name' value='contact' />
         <h4 className='contact-message'>
           Have a message or just wanna say hi? <br /> Contact us and we'll
           gladly answer!
@@ -58,6 +54,7 @@ const ContactForm = () => {
             initial='initial'
             type='text'
             id='name'
+            name='name'
             placeholder='Name'
             required
           />
@@ -67,6 +64,7 @@ const ContactForm = () => {
             transition={{ duration: 0.5 }}
             initial='initial'
             type='text'
+            name='subject'
             placeholder='Subject'
             required
           />
@@ -78,6 +76,7 @@ const ContactForm = () => {
           transition={{ duration: 0.5 }}
           initial='initial'
           type='email'
+          name='email'
           placeholder='Email'
           required
         />
