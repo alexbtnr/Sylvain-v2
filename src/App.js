@@ -6,6 +6,7 @@ import Reservations from "./pages/Reservations";
 
 // Styles
 import GlobalStyles from "./components/GlobalStyles";
+import { AnimatePresence } from "framer-motion";
 
 // Router
 import { Route, Switch, useLocation } from "react-router-dom";
@@ -21,6 +22,7 @@ function App() {
 
   useEffect(() => {
     saveLocalReservations();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formList]);
 
   const saveLocalReservations = () => {
@@ -39,19 +41,21 @@ function App() {
   return (
     <div className='App'>
       <GlobalStyles />
-      <Switch location={location} key={location.pathname}>
-        <Route path='/' exact>
-          <Home formList={formList} setFormList={setFormList} />
-        </Route>
-        <Route path='/reservations'>
-          <Reservations
-            formList={formList}
-            setFormList={setFormList}
-            alert={alert}
-            setAlert={setAlert}
-          />
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path='/' exact>
+            <Home formList={formList} setFormList={setFormList} />
+          </Route>
+          <Route path='/reservations'>
+            <Reservations
+              formList={formList}
+              setFormList={setFormList}
+              alert={alert}
+              setAlert={setAlert}
+            />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }

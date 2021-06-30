@@ -202,7 +202,7 @@ const StyledContactForm = styled.div`
     .contact-form {
       .contact-message {
         margin-bottom: 0;
-        padding: 0.5rem 0;
+        padding: 1rem 0.5rem;
         background: rgba(0, 0, 0, 0.6);
         text-align: center;
         border: 2px solid #fff;

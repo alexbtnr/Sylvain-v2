@@ -8,11 +8,7 @@ import hikerGroup4 from "../img/hikerGroup4.jpg";
 import hikerMan3 from "../img/hikerMan3.jpg";
 import hikerPuppy from "../img/hikerPuppy.jpg";
 import { useInView } from "react-intersection-observer";
-import {
-  storiesAnimationWrapper,
-  storiesAnimationX,
-  storiesAnimationY,
-} from "../animations";
+import { storiesAnimationWrapper, storiesAnimationY } from "../animations";
 
 const PeopleAndStories = () => {
   const controls = useAnimation();

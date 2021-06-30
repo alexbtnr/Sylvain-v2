@@ -12,7 +12,7 @@ import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
   const controls = useAnimation();
-  const [element4, view] = useInView({ threshold: 0.5 });
+  const [element4, view] = useInView();
 
   if (view) {
     controls.start("animate");

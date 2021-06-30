@@ -5,7 +5,7 @@ import { formInputHover, formButtonHover } from "../animations";
 import Reservation from "./Reservation";
 import Alert from "./Alert";
 import { v4 as uuid } from "uuid";
-import { contactAnimationY, contactAnimationX } from "../animations";
+import { contactAnimationY } from "../animations";
 
 const LandingReservationsForm = ({
   formList,
