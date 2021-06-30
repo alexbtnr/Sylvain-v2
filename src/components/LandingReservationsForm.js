@@ -45,6 +45,9 @@ const LandingReservationsForm = ({
       setHikers("");
     } else {
       setAlert(true);
+      setTimeout(() => {
+        setAlert(false);
+      }, 5000);
       setCheckIn("");
       setCheckOut("");
       setHikers("");
@@ -143,7 +146,7 @@ const LandingReservationsForm = ({
             animate='animate'
             className='flex-right'
           >
-            {formList.map((reservation) => (
+            {formList.reverse().map((reservation) => (
               <Reservation
                 formList={formList}
                 setFormList={setFormList}
@@ -259,7 +262,7 @@ const StyledForm = styled(motion.form)`
     align-items: center;
 
     .flex-right {
-      order: 1;
+      order: 2;
       margin-bottom: 1.5rem;
       max-width: 60%;
 
@@ -269,13 +272,13 @@ const StyledForm = styled(motion.form)`
     }
 
     .flex-left {
-      order: 2;
+      order: 3;
       margin-bottom: 1.5rem;
       max-width: 60%;
     }
 
     #alert-wrapper {
-      order: 3;
+      order: 1;
       max-width: 30%;
     }
   }

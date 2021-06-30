@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { contactAnimationY } from "../animations";
 
 const Reservation = ({ reservation, formList, setFormList }) => {
   const deleteHandler = () => {
@@ -9,12 +7,7 @@ const Reservation = ({ reservation, formList, setFormList }) => {
   };
 
   return (
-    <StyledReservation
-      variants={contactAnimationY}
-      initial='initial'
-      animate='animate'
-      id={reservation.id}
-    >
+    <StyledReservation id={reservation.id}>
       <h4 className='reservations-checkin'>{reservation.checkIn}</h4>
       <h4 className='reservations-checkout'>{reservation.checkOut}</h4>
       <h4 className='reservations-hikers'>{reservation.hikers}</h4>
@@ -25,7 +18,7 @@ const Reservation = ({ reservation, formList, setFormList }) => {
   );
 };
 
-const StyledReservation = styled(motion.div)`
+const StyledReservation = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: left;
