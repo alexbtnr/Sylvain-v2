@@ -35,11 +35,16 @@ const ContactForm = () => {
           Stress
         </motion.h2>
       </motion.div>
-      <form className='contact-form'>
+      <form name='contact' method='POST' netlify className='contact-form'>
         <h4 className='contact-message'>
           Have a message or just wanna say hi? <br /> Contact us and we'll
           gladly answer!
         </h4>
+        <input
+          type='text'
+          placeholder='Don’t fill this out if you’re human!'
+          className='hidden-pot'
+        />
         <div className='form-group'>
           <motion.input
             variants={formInputHover}
@@ -142,6 +147,10 @@ const StyledContactForm = styled.div`
     flex: 3;
 
     flex-direction: column;
+
+    .hidden-pot {
+      display: none;
+    }
 
     .contact-message {
       font-size: 1.2rem;
