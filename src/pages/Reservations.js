@@ -13,7 +13,7 @@ const Reservations = ({ formList, setFormList, alert, setAlert }) => {
         setAlert={setAlert}
       />
       <Contact />
-      <GoToTopButton />
+      <GoToTopButton showBelow={200} />
     </div>
   );
 };
