@@ -35,7 +35,12 @@ const ContactForm = () => {
           Stress
         </motion.h2>
       </motion.div>
-      <form name='contact' method='POST' netlify className='contact-form'>
+      <form
+        name='contact'
+        method='POST'
+        data-netlify='true'
+        className='contact-form'
+      >
         <h4 className='contact-message'>
           Have a message or just wanna say hi? <br /> Contact us and we'll
           gladly answer!
