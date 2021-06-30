@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Landing from "../components/Landing";
 import About from "../components/About";
 import InfoImage from "../components/InfoImage";
@@ -12,6 +12,10 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../animations";
 
 const Home = ({ formList, setFormList }) => {
+  useEffect(() => {
+    document.title = "Sylvain | Homepage";
+  }, []);
+
   return (
     <motion.div
       variants={pageAnimation}

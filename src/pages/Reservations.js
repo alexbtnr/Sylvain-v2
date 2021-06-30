@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Contact from "../components/Contact";
 import GoToTopButton from "../components/GoToTopButton";
 import LandingReservations from "../components/LandingReservations";
@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../animations";
 
 const Reservations = ({ formList, setFormList, alert, setAlert }) => {
+  useEffect(() => {
+    document.title = "Sylvain | Reservations";
+  }, []);
+
   return (
     <motion.div
       variants={pageAnimation}
