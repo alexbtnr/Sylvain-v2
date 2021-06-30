@@ -1,3 +1,20 @@
+This is a website for a hiking company which allows you to book a check-in date, a check-out date and the number of persons.
+
+It was made with the purpose of showcasing various of my developer skills and adding it to my portfolio (https://alex-butnaru-portfolio.netlify.app/).
+
+It is semi-responsive, meaning it only looks good on large screens such as desktops and laptops as well as on most mobile phones. In the future I will also add styles for tablets and for smartphones landscape view.
+
+To make this web-app I've used create-react-app together with the following packages:
+- react-router-dom
+- framer-motion
+- react-intersection-observer
+- react-slick
+- simple-react-lightbox
+- styled-components
+- hamburger-react
+- uuid
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
