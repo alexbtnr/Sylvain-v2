@@ -7,6 +7,7 @@ import PhotoGallery from "../components/PhotoGallery";
 import Carousel from "../components/Carousel";
 import Video from "../components/Video";
 import Contact from "../components/Contact";
+import GoToTopButton from "../components/GoToTopButton";
 
 const Home = ({ formList, setFormList }) => {
   return (
@@ -19,6 +20,7 @@ const Home = ({ formList, setFormList }) => {
       <Carousel />
       <Video />
       <Contact />
+      <GoToTopButton showBelow={400} />
     </div>
   );
 };
