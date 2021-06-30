@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Hamburger from "hamburger-react";
+import { Link } from "react-router-dom";
 
 const Nav = ({ hrefList, textList }) => {
   const location = useLocation();
@@ -10,7 +11,39 @@ const Nav = ({ hrefList, textList }) => {
 
   return (
     <StyledNav>
-      {location.pathname === "/reservations" ? null : (
+      {location.pathname === "/reservations" ? (
+        <div>
+          <div className='normal-nav2'>
+            <ul>
+              <li>
+                <Link to={hrefList[0]}>{textList[0]}</Link>
+              </li>
+              <li>
+                <a href={hrefList[1]}>{textList[1]}</a>
+              </li>
+            </ul>
+          </div>
+          <div className='mobile-nav2'>
+            {isOpen && (
+              <motion.ul
+                initial={{ opacity: 0, y: -500 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <li onClick={() => setIsOpen(false)}>
+                  <Link to={hrefList[0]}>{textList[0]}</Link>
+                </li>
+                <li onClick={() => setIsOpen(false)}>
+                  <a href={hrefList[1]}>{textList[1]}</a>
+                </li>
+              </motion.ul>
+            )}
+          </div>
+          <div className='hamburger-wrapper'>
+            <Hamburger toggled={isOpen} toggle={setIsOpen} />
+          </div>
+        </div>
+      ) : (
         <div>
           <div className='normal-nav'>
             <ul>
@@ -107,21 +140,25 @@ const StyledNav = styled(motion.nav)`
   }
 
   div.mobile-nav,
+  div.mobile-nav2,
   .hamburger-react {
     display: none;
   }
 
   @media (max-width: 800px) {
-    div.normal-nav {
+    div.normal-nav,
+    div.normal-nav2 {
       display: none;
     }
 
     div.mobile-nav,
+    div.mobile-nav2,
     .hamburger-react {
       display: block;
     }
 
-    div.mobile-nav {
+    div.mobile-nav,
+    div.mobile-nav2 {
       position: fixed;
       top: 0;
       left: 0;

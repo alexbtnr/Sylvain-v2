@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // Pages
 import Home from "./pages/Home";
+import Reservations from "./pages/Reservations";
 
 // Styles
 import GlobalStyles from "./components/GlobalStyles";
@@ -12,6 +13,7 @@ import { Route, Switch, useLocation } from "react-router-dom";
 function App() {
   const location = useLocation();
   const [formList, setFormList] = useState([]);
+  const [alert, setAlert] = useState(false);
 
   useEffect(() => {
     getLocalReservations();
@@ -40,6 +42,14 @@ function App() {
       <Switch location={location} key={location.pathname}>
         <Route path='/' exact>
           <Home formList={formList} setFormList={setFormList} />
+        </Route>
+        <Route path='/reservations'>
+          <Reservations
+            formList={formList}
+            setFormList={setFormList}
+            alert={alert}
+            setAlert={setAlert}
+          />
         </Route>
       </Switch>
     </div>
