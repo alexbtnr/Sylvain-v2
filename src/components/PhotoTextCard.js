@@ -18,6 +18,7 @@ const StyledCard = styled(motion.div)`
   background: #000;
   color: #fff;
   height: 25rem;
+  /* height: 70%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,6 +45,14 @@ const StyledCard = styled(motion.div)`
       text-transform: uppercase;
       font-weight: lighter;
       letter-spacing: 1px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    height: 70%;
+
+    img {
+      max-height: 20rem;
     }
   }
 `;
