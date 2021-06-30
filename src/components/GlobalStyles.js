@@ -12,8 +12,9 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    background: #cfcfff;
-    /* background: red; */
+    /* background: #cfcfff; */
+    background: #F2F4F5;
+
 
     div.container {
       max-width: 1280px;

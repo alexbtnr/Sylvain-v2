@@ -68,6 +68,8 @@ const PeopleAndStories = () => {
 };
 
 const StyledStories = styled(motion.div)`
+  background: #e5eaef;
+
   .container {
     padding: 5rem 0;
     display: flex;
