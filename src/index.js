@@ -4,14 +4,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { BrowserRouter as Router } from "react-router-dom";
+import LanguageContextProvider from "./contexts/LanguageContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SimpleReactLightbox>
-      <Router>
-        <App />
-      </Router>
-    </SimpleReactLightbox>
+    <LanguageContextProvider>
+      <SimpleReactLightbox>
+        <Router>
+          <App />
+        </Router>
+      </SimpleReactLightbox>
+    </LanguageContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

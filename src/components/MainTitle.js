@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 import styled from "styled-components";
 
 const MainTitle = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   return (
     <StyledTitle>
-      "And into the forest I go, to lose my mind and find my soul." <br /> -
-      John Muir
+      {lang.mainTitle}
+      <br /> - John Muir
     </StyledTitle>
   );
 };

@@ -41,6 +41,7 @@ function App() {
   return (
     <div className='App'>
       <GlobalStyles />
+
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path='/' exact>

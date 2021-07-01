@@ -15,19 +15,6 @@ const Nav = ({ hrefList, textList }) => {
         <div>
           <div className='normal-nav2'>
             <ul>
-              <li className='language-setter'>
-                <label htmlFor='switchBtn' className='ro'>
-                  Ro
-                </label>
-                <label className='switch'>
-                  <input type='checkbox' id='switchBtn' name='switchBtn' />
-                  <span className='slider round'></span>
-                </label>
-                <label htmlFor='switchBtn' className='en'>
-                  En
-                </label>
-              </li>
-
               <li>
                 <Link to={hrefList[0]}>{textList[0]}</Link>
               </li>
@@ -43,18 +30,6 @@ const Nav = ({ hrefList, textList }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <li className='language-setter'>
-                  <label htmlFor='switchBtn' className='ro'>
-                    Ro
-                  </label>
-                  <label className='switch'>
-                    <input type='checkbox' id='switchBtn' name='switchBtn' />
-                    <span className='slider round'></span>
-                  </label>
-                  <label htmlFor='switchBtn' className='en'>
-                    En
-                  </label>
-                </li>
                 <li onClick={() => setIsOpen(false)}>
                   <Link to={hrefList[0]}>{textList[0]}</Link>
                 </li>
@@ -72,18 +47,6 @@ const Nav = ({ hrefList, textList }) => {
         <div>
           <div className='normal-nav'>
             <ul>
-              <li className='language-setter'>
-                <label htmlFor='switchBtn' className='ro'>
-                  Ro
-                </label>
-                <label className='switch'>
-                  <input type='checkbox' id='switchBtn' name='switchBtn' />
-                  <span className='slider round'></span>
-                </label>
-                <label htmlFor='switchBtn' className='en'>
-                  En
-                </label>
-              </li>
               <li>
                 <a href={hrefList[0]}>{textList[0]}</a>
               </li>
@@ -113,18 +76,6 @@ const Nav = ({ hrefList, textList }) => {
                   exit={{ opacity: 0, y: -500 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <li className='language-setter'>
-                    <label htmlFor='switchBtn' className='ro'>
-                      Ro
-                    </label>
-                    <label className='switch'>
-                      <input type='checkbox' id='switchBtn' name='switchBtn' />
-                      <span className='slider round'></span>
-                    </label>
-                    <label htmlFor='switchBtn' className='en'>
-                      En
-                    </label>
-                  </li>
                   <li onClick={() => setIsOpen(false)}>
                     <a href='#showcase'>Home</a>
                   </li>
@@ -164,78 +115,6 @@ const StyledNav = styled(motion.nav)`
     display: flex;
     list-style: none;
     align-items: center;
-
-    .language-setter {
-      display: flex;
-      .switch {
-        margin: 0 0.5rem;
-      }
-    }
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 26px;
-    }
-
-    /* Hide default HTML checkbox */
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    /* The slider */
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 18px;
-      width: 18px;
-      left: 4px;
-      bottom: 4px;
-      background-color: #333;
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
-    }
-
-    input:checked + .slider {
-      background-color: #000;
-    }
-    input:checked + .slider:before {
-      background-color: #fff;
-    }
-
-    input:focus + .slider {
-      box-shadow: 0 0 1px #000;
-    }
-
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-
-    /* Rounded sliders */
-    .slider.round {
-      border-radius: 34px;
-    }
-
-    .slider.round:before {
-      border-radius: 50%;
-    }
 
     li {
       margin-left: 2rem;
@@ -303,7 +182,6 @@ const StyledNav = styled(motion.nav)`
           margin-bottom: 0.5rem;
           padding-left: 5%;
           width: 100%;
-          color: #fff;
 
           a {
             color: #fff;
