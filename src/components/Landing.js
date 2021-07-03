@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Nav from "./Nav";
@@ -7,8 +7,11 @@ import backgroundForest from "../img/backgroundForest.jpg";
 import MainTitle from "./MainTitle";
 import LandingForm from "./LandingForm";
 import ScrollArrow from "./ScrollArrow";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const Landing = ({ formList, setFormList }) => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   return (
     <StyledLanding id='showcase'>
       <div className='container'>
@@ -23,14 +26,7 @@ const Landing = ({ formList, setFormList }) => {
               "#video",
               "#contact",
             ]}
-            textList={[
-              "About",
-              "Stories",
-              "Gallery",
-              "Accomodation",
-              "Video",
-              "Contact",
-            ]}
+            textList={lang.textList}
           />
         </header>
         <div className='main-content'>

@@ -15,6 +15,7 @@ const LanguageToggler = () => {
 
 const StyledToggler = styled.li`
   list-style: none;
+  cursor: pointer;
   margin-left: 1rem;
   background: #333;
   border: 1px solid #000;

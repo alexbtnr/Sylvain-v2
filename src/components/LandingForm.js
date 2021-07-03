@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { v4 as uuid } from "uuid";
 import { formInputHover, formButtonHover } from "../animations";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const LandingForm = ({ formList, setFormList }) => {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [hikers, setHikers] = useState("");
   const [form, setForm] = useState(null);
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
 
   const checkInHandler = (e) => {
     setCheckIn(e.target.value);
@@ -48,7 +51,7 @@ const LandingForm = ({ formList, setFormList }) => {
     <>
       {form ? (
         <SubmittedForm>
-          <p>Thank you! Your booking details have been received!</p>
+          <p>{lang.bookingReceived}</p>
           <motion.button
             variants={formButtonHover}
             whileHover='hover'
@@ -56,7 +59,7 @@ const LandingForm = ({ formList, setFormList }) => {
             initial='initial'
             onClick={() => setForm(null)}
           >
-            Make another reservation!
+            {lang.anotherReservation}
           </motion.button>
           <Link to='/reservations' id='secondary-reservations-wrapper'>
             <motion.button
@@ -66,7 +69,7 @@ const LandingForm = ({ formList, setFormList }) => {
               initial='initial'
               id='secondary-reservations'
             >
-              Reservations
+              {lang.reservations}
             </motion.button>
           </Link>
         </SubmittedForm>
@@ -107,7 +110,7 @@ const LandingForm = ({ formList, setFormList }) => {
             </div>
             <div className='form-group'>
               <label id='hikers-label' htmlFor='hikers'>
-                Hikers
+                {lang.hikers}
               </label>
               <motion.input
                 variants={formInputHover}
@@ -117,7 +120,7 @@ const LandingForm = ({ formList, setFormList }) => {
                 type='text'
                 id='hikers'
                 name='hikers'
-                placeholder='3 Persons'
+                placeholder={lang.nrPersons}
                 value={hikers}
                 onChange={hikersHandler}
                 required
@@ -131,7 +134,7 @@ const LandingForm = ({ formList, setFormList }) => {
             initial='initial'
             type='submit'
             className='form-button'
-            value='BOOK NOW'
+            value={lang.bookNow}
           />
           {formList.length > 0 && (
             <Link id='reservations-wrapper' to='/reservations'>
@@ -144,7 +147,7 @@ const LandingForm = ({ formList, setFormList }) => {
                 className='form-button'
                 id='reservations'
               >
-                Reservations
+                {lang.reservations}
               </motion.button>
             </Link>
           )}
