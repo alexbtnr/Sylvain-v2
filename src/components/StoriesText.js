@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const StoriesText = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   return (
     <StyledStoriesText>
-      <h4>PEOPLE AND STORIES</h4>
-      <h2>Why Choose Sylvain?</h2>
-      <p>
-        Here are a couple of testimonials from our regular clients on why they
-        prefer our hiking services.
-      </p>
+      <h4>{lang.storiesMainTitle}</h4>
+      <h2>{lang.storiesSecondaryTitle}</h2>
+      <p>{lang.storiesMainText}</p>
     </StyledStoriesText>
   );
 };

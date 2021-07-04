@@ -50,6 +50,17 @@ class LanguageContextProvider extends Component {
       info1: "Țări",
       info2: "Trasee",
       info3: "Locuri de cazare",
+      storiesText1: `"Un cățeluș Golden Retriever aprobă serviciile oferite de Sylvain"`,
+      storiesTitle1: "Cățeluș Golden Retriever",
+      storiesText2: `"Nu toţi cei care hoinăresc sunt pierduţi."`,
+      storiesText3: `"Un loc unic de explorat și de descoperit singur sau cu un grup de prieteni"`,
+      storiesTitle3: "Un grup de prieteni",
+      storiesText4: `"Un spațiu unic pentru a scăpa de stres și pentru a-ți reîncărca bateriile departe de viața de oraș"`,
+      storiesMainTitle: "OAMENI ȘI POVEȘTI",
+      storiesSecondaryTitle: "De ce să alegi Sylvain?",
+      storiesMainText:
+        "Iată câteva mărturii ale clienților noștri obișnuiți despre motivul pentru care preferă serviciile noastre de drumeții.",
+      galleryTitle: "Galeria noastră",
     },
     en: {
       mainTitle: `"And into the forest I go, to lose my mind and find my soul."`,
@@ -86,6 +97,17 @@ class LanguageContextProvider extends Component {
       info1: "Countries",
       info2: "Trails",
       info3: "Camps",
+      storiesText1: `"A Golden Retriever Puppy approves of Sylvain's services"`,
+      storiesTitle1: "Golden Retriever Puppy",
+      storiesText2: `"Not all those who wander are lost."`,
+      storiesText3: `"A unique place to explore and discover by yourself or with a group of friends"`,
+      storiesTitle3: "A group of friends",
+      storiesText4: `"A unique space to unload and recharge your batteries away from the city life"`,
+      storiesMainTitle: "PEOPLE AND STORIES",
+      storiesSecondaryTitle: "Why Choose Sylvain?",
+      storiesMainText:
+        "Here are a couple of testimonials from our regular clients on why they prefer our hiking services.",
+      galleryTitle: "Our photo Gallery",
     },
   };
   toggleLanguage = () => {

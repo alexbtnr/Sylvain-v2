@@ -1,5 +1,5 @@
 import { motion, useAnimation } from "framer-motion";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import PhotoTextCard from "./PhotoTextCard";
 import StoriesText from "./StoriesText";
@@ -9,8 +9,11 @@ import hikerMan3 from "../img/hikerMan3.jpg";
 import hikerPuppy from "../img/hikerPuppy.jpg";
 import { useInView } from "react-intersection-observer";
 import { storiesAnimationWrapper, storiesAnimationY } from "../animations";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const PeopleAndStories = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   const controls = useAnimation();
   const [element, view] = useInView();
 
@@ -32,28 +35,28 @@ const PeopleAndStories = () => {
           <motion.div variants={storiesAnimationY}>
             <PhotoTextCard
               img={hikerPuppy}
-              paragraph={`"A Golden Retriever Puppy approves of Sylvain's services"`}
-              title='Golden Retriever Puppy'
+              paragraph={`${lang.storiesText1}`}
+              title={`${lang.storiesTitle1}`}
             />
           </motion.div>
           <motion.div variants={storiesAnimationY}>
             <PhotoTextCard
               img={hikerMan3}
-              paragraph='"Not all those who wander are lost."'
+              paragraph={`${lang.storiesText2}`}
               title='Enzo Russo'
             />
           </motion.div>
           <motion.div variants={storiesAnimationY}>
             <PhotoTextCard
               img={hikerGroup4}
-              paragraph='"A unique place to explore and discover by yourself or with a group of friends"'
-              title='A group of friends'
+              paragraph={`${lang.storiesText3}`}
+              title={`${lang.storiesTitle3}`}
             />
           </motion.div>
           <motion.div variants={storiesAnimationY}>
             <PhotoTextCard
               img={hikerGirl2}
-              paragraph='"A unique space to unload and recharge your batteries away from the city life"'
+              paragraph={`${lang.storiesText4}`}
               title='Anna Johansen'
             />
           </motion.div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import hikerGroup2 from "../img/hikerGroup2.jpg";
 import hikerGroup3 from "../img/hikerGroup3.jpg";
 import forestRoad from "../img/forestRoad.jpg";
@@ -14,8 +14,11 @@ import {
   galleryAnimationY,
 } from "../animations";
 import { SRLWrapper } from "simple-react-lightbox";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const PhotoGallery = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   const controls = useAnimation();
   const [element2, view] = useInView();
 
@@ -56,7 +59,7 @@ const PhotoGallery = () => {
         className='container'
       >
         <motion.h4 variants={galleryTitleAnimationX}>
-          Our photo Gallery
+          {lang.galleryTitle}
         </motion.h4>
         <SRLWrapper options={options}>
           <div className='images-container'>
