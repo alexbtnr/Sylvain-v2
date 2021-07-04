@@ -44,6 +44,12 @@ class LanguageContextProvider extends Component {
       card3Title: "Bucură-te de drumeții în pădure",
       card3Text:
         "După o lungă iarnă, oamenii de toate categoriile de vârstă și mediile sociale se îndreaptă spre aer liber și fac drumeții în munți, de-a lungul coastei sau în păduri.",
+      infoTitle: "Găsește-ți drumul",
+      infoText:
+        "Câteva exemple de trasee de drumeție clasice (și provocatoare!) În Norvegia sunt Preikestolen, Trolltunga, Galdhøpiggen, Besseggen și Romsdalseggen.",
+      info1: "Țări",
+      info2: "Trasee",
+      info3: "Locuri de cazare",
     },
     en: {
       mainTitle: `"And into the forest I go, to lose my mind and find my soul."`,
@@ -74,6 +80,12 @@ class LanguageContextProvider extends Component {
       card3Title: "Enjoy Forest Hiking",
       card3Text:
         "After a long winter, people of all age groups and social backgrounds head outdoors and go trekking in the mountains, along the coast, or in the forests.",
+      infoTitle: "Find your path",
+      infoText:
+        "A few examples of classic (and challenging!) hiking routes in Norway are Preikestolen, Trolltunga, Galdhøpiggen, Besseggen, and Romsdalseggen.",
+      info1: "Countries",
+      info2: "Trails",
+      info3: "Camps",
     },
   };
   toggleLanguage = () => {
