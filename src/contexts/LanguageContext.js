@@ -62,6 +62,10 @@ class LanguageContextProvider extends Component {
         "Iată câteva mărturii ale clienților noștri obișnuiți despre motivul pentru care preferă serviciile noastre de drumeții.",
       galleryTitle: "Galeria noastră",
       carouselTitle1: "Cazare",
+      videoTitle: "O plimbare în natură îți conduce sufletul înapoi acasă.",
+      videoText:
+        "Dacă ați decis când și unde doriți să mergeți în drumeții, faceți click pe butonul de mai jos pentru a face o rezervare",
+      videoBtn: "Rezervă",
     },
     en: {
       mainTitle: `"And into the forest I go, to lose my mind and find my soul."`,
@@ -110,6 +114,10 @@ class LanguageContextProvider extends Component {
         "Here are a couple of testimonials from our regular clients on why they prefer our hiking services.",
       galleryTitle: "Our photo Gallery",
       carouselTitle1: "Accomodation",
+      videoTitle: "A walk in nature walks the soul back home.",
+      videoText:
+        "If you've decided on when and where you want to go hiking simply click the button below to book a reservation",
+      videoBtn: "Book Now",
     },
   };
   toggleLanguage = () => {
