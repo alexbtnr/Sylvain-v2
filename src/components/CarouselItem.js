@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../contexts/LanguageContext";
 
-const CarouselItem = ({ id, img, primaryTitle, secondaryTitle, paragraph }) => {
+const CarouselItem = ({ id, img, secondaryTitle, paragraph }) => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   return (
     <StyledItem>
       <img src={img} alt={id} id={id} />
       <div className='carousel-text'>
-        <h6>{primaryTitle}</h6>
+        <h6>{lang.carouselTitle1}</h6>
         <h4>{secondaryTitle}</h4>
         <p>{paragraph}</p>
       </div>

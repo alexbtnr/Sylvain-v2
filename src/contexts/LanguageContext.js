@@ -61,6 +61,7 @@ class LanguageContextProvider extends Component {
       storiesMainText:
         "Iată câteva mărturii ale clienților noștri obișnuiți despre motivul pentru care preferă serviciile noastre de drumeții.",
       galleryTitle: "Galeria noastră",
+      carouselTitle1: "Cazare",
     },
     en: {
       mainTitle: `"And into the forest I go, to lose my mind and find my soul."`,
@@ -108,6 +109,7 @@ class LanguageContextProvider extends Component {
       storiesMainText:
         "Here are a couple of testimonials from our regular clients on why they prefer our hiking services.",
       galleryTitle: "Our photo Gallery",
+      carouselTitle1: "Accomodation",
     },
   };
   toggleLanguage = () => {
