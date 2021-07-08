@@ -66,6 +66,15 @@ class LanguageContextProvider extends Component {
       videoText:
         "Dacă ați decis când și unde doriți să mergeți în drumeții, faceți click pe butonul de mai jos pentru a face o rezervare",
       videoBtn: "Rezervă",
+      contactText1: "Odihnă",
+      contactText2: "fără",
+      contactText3: "Stres",
+      contactMsg:
+        "Aveți un mesaj sau vreți doar să ne salutați? Contactați-ne și vă vom răspunde cu plăcere!",
+      contactPlaceholderName: "Nume",
+      contactPlaceholderSubject: "Subiect",
+      contactPlaceholderMessage: "Mesaj",
+      contactBtn: "Trimite",
     },
     en: {
       mainTitle: `"And into the forest I go, to lose my mind and find my soul."`,
@@ -118,6 +127,15 @@ class LanguageContextProvider extends Component {
       videoText:
         "If you've decided on when and where you want to go hiking simply click the button below to book a reservation",
       videoBtn: "Book Now",
+      contactText1: "Relax",
+      contactText2: "no",
+      contactText3: "Stress",
+      contactMsg:
+        "Have a message or just wanna say hi? Contact us and we'll gladly answer!",
+      contactPlaceholderName: "Name",
+      contactPlaceholderSubject: "Subject",
+      contactPlaceholderMessage: "Message",
+      contactBtn: "Submit",
     },
   };
   toggleLanguage = () => {
