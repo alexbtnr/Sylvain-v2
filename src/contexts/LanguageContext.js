@@ -75,6 +75,11 @@ class LanguageContextProvider extends Component {
       contactPlaceholderSubject: "Subiect",
       contactPlaceholderMessage: "Mesaj",
       contactBtn: "Trimite",
+      footerLogo: "Logo creat cu",
+      footerImages: "Imagini si video luate de la",
+      footerInspiration1: "Inspirație pentru design",
+      footerInspiration2: "aici",
+      footerInspiration3: "și",
     },
     en: {
       mainTitle: `"And into the forest I go, to lose my mind and find my soul."`,
@@ -136,6 +141,11 @@ class LanguageContextProvider extends Component {
       contactPlaceholderSubject: "Subject",
       contactPlaceholderMessage: "Message",
       contactBtn: "Submit",
+      footerLogo: "Logo made with",
+      footerImages: "Images and video taken from",
+      footerInspiration1: "Inspiration for design from",
+      footerInspiration2: "here",
+      footerInspiration3: "and",
     },
   };
   toggleLanguage = () => {
