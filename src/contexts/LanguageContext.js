@@ -25,11 +25,16 @@ class LanguageContextProvider extends Component {
     ro: {
       mainTitle: `"Și în pădure mă duc, să-mi pierd mintea și să-mi găsesc sufletul."`,
       textList: ["Despre", "Povești", "Galerie", "Cazare", "Video", "Contact"],
+      reservationsTextList: ["Acasă", "Contact"],
       hikers: "Excursioniști",
       nrPersons: "3 Persoane",
       bookNow: "INREGISTRARE",
       reservations: "Rezervări",
+      clearReservations: "Ștergeți rezervările",
       anotherReservation: "Mai faceţi o rezervare!",
+      alertText1: "Numărul maxim de rezervări efectuate.",
+      alertText2:
+        "Ștergeți una sau mai multe dacă doriți să continuați să faceți rezervări.",
       bookingReceived: "Mulțumesc! Detaliile rezervării dvs. au fost primite!",
       aboutMainText:
         "Faceți drumeții în 5 țări europene și descoperiți de ce localnicii nu se pot sătura de natură.",
@@ -91,10 +96,15 @@ class LanguageContextProvider extends Component {
         "Video",
         "Contact",
       ],
+      reservationsTextList: ["Home", "Contact"],
       hikers: "Hikers",
       nrPersons: "3 Persons",
       bookNow: "BOOK NOW",
       reservations: "Reservations",
+      clearReservations: "Clear reservations",
+      alertText1: "Maximum number of reservations made.",
+      alertText2:
+        "Delete one or more if you wish to continue making reservations.",
       anotherReservation: "Make another reservation!",
       bookingReceived: "Thank you! Your booking details have been received!",
       aboutMainText:

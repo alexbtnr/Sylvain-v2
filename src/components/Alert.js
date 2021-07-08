@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const Alert = ({ setAlert }) => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   const deleteAlertHandler = () => {
     setAlert(false);
   };
@@ -9,9 +12,9 @@ const Alert = ({ setAlert }) => {
   return (
     <StyledAlert>
       <i onClick={deleteAlertHandler} className='las la-times-circle la-2x'></i>
-      <h4>Maximum number of reservations made.</h4>
+      <h4>{lang.alertText1}</h4>
       <i className='las la-exclamation-triangle la-3x'></i>
-      <h4>Delete one or more if you wish to continue making reservations.</h4>
+      <h4>{lang.alertText2}</h4>
     </StyledAlert>
   );
 };
