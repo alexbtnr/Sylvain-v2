@@ -1,11 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { formInputHover, formButtonHover } from "../animations";
 import Reservation from "./Reservation";
 import Alert from "./Alert";
 import { v4 as uuid } from "uuid";
 import { contactAnimationY } from "../animations";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const LandingReservationsForm = ({
   formList,
@@ -13,6 +14,8 @@ const LandingReservationsForm = ({
   alert,
   setAlert,
 }) => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [hikers, setHikers] = useState("");
@@ -97,7 +100,7 @@ const LandingReservationsForm = ({
           </div>
           <div className='form-group'>
             <label htmlFor='hikers' id='hikers-label'>
-              Hikers
+              {lang.hikers}
             </label>
             <motion.input
               variants={formInputHover}
@@ -108,7 +111,7 @@ const LandingReservationsForm = ({
               type='text'
               name='hikers'
               id='hikers'
-              placeholder='3 Persons'
+              placeholder={lang.nrPersons}
               value={hikers}
               onChange={hikersHandler}
             />
@@ -121,7 +124,7 @@ const LandingReservationsForm = ({
               initial='initial'
               className='form-button'
               type='submit'
-              value='BOOK NOW'
+              value={lang.bookNow}
               id='bookBtn'
             />
           </div>
@@ -163,7 +166,7 @@ const LandingReservationsForm = ({
                 initial='initial'
                 className='form-button'
                 type='submit'
-                value='Clear Reservations'
+                value={lang.clearReservations}
                 id='clearBtn'
               />
             )}

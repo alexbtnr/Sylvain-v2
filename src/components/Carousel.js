@@ -14,7 +14,6 @@ const images = [
   {
     id: 1,
     imageName: cabinDay,
-    primaryTitle: "Accomodation",
     imageId: "cabinDay",
     secondaryTitle: "Lorem ipsum dolor sit amet.",
     paragraph:
@@ -23,7 +22,6 @@ const images = [
   {
     id: 2,
     imageName: cabinNight,
-    primaryTitle: "Accomodation",
     imageId: "cabinNight",
     secondaryTitle: "Lorem ipsum dolor sit amet.",
     paragraph:
@@ -32,7 +30,6 @@ const images = [
   {
     id: 3,
     imageName: cabinCity,
-    primaryTitle: "Accomodation",
     imageId: "cabinCity",
     secondaryTitle: "Lorem ipsum dolor sit amet.",
     paragraph:
@@ -41,7 +38,6 @@ const images = [
   {
     id: 4,
     imageName: cabinInterior1,
-    primaryTitle: "Accomodation",
     imageId: "cabinInterior1",
     secondaryTitle: "Lorem ipsum dolor sit amet.",
     paragraph:
@@ -50,7 +46,6 @@ const images = [
   {
     id: 5,
     imageName: cabinInterior2,
-    primaryTitle: "Accomodation",
     imageId: "cabinInterior2",
     secondaryTitle: "Lorem ipsum dolor sit amet.",
     paragraph:
@@ -59,7 +54,6 @@ const images = [
   {
     id: 6,
     imageName: cabinInterior3,
-    primaryTitle: "Accomodation",
     imageId: "cabinInterior3",
     secondaryTitle: "Lorem ipsum dolor sit amet.",
     paragraph:
@@ -88,7 +82,6 @@ const Carousel = () => {
                 key={image.id}
                 img={image.imageName}
                 id={image.imageId}
-                primaryTitle={image.primaryTitle}
                 secondaryTitle={image.secondaryTitle}
                 paragraph={image.paragraph}
               />

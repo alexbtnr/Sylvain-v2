@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import forestVideo from "../img/forestVideo.mp4";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const Video = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   return (
     <StyledVideo id='video'>
       <div className='overlay'>
         <div className='container'>
           <div className='content'>
             <h4>
-              "A walk in nature walks the soul back home." <br /> - Mary Davis{" "}
+              "{lang.videoTitle}" <br /> - Mary Davis{" "}
             </h4>
-            <h2>
-              If you've decided on when and where you want to go hiking simply
-              click the button below to book a reservation
-            </h2>
-            <a href='#showcase'>Book Now</a>
+            <h2>{lang.videoText}</h2>
+            <a href='#showcase'>{lang.videoBtn}</a>
           </div>
         </div>
       </div>

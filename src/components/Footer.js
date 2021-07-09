@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 
 import { motion, useAnimation } from "framer-motion";
@@ -9,8 +9,11 @@ import {
   contactAnimationY,
 } from "../animations";
 import { useInView } from "react-intersection-observer";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const Footer = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   const controls = useAnimation();
   const [element4, view] = useInView();
 
@@ -35,7 +38,7 @@ const Footer = () => {
           >
             <p>Copyright © 2021 Alex Butnaru.</p>
             <p>
-              Logo made with
+              {lang.footerLogo}
               <span className='chevron-right'>
                 <i className='las la-chevron-right'></i>
                 <a
@@ -49,7 +52,7 @@ const Footer = () => {
               </span>
             </p>
             <p className='last-link'>
-              Images and video taken from
+              {lang.footerImages}
               <span className='chevron-right'>
                 <i className='las la-chevron-right'></i>
                 <a
@@ -70,7 +73,7 @@ const Footer = () => {
             id='second'
           >
             <p>
-              Inspiration for design from
+              {lang.footerInspiration1}
               <span className='chevron-right'>
                 <i className='las la-chevron-right'></i>
                 <a
@@ -78,7 +81,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  here
+                  {lang.footerInspiration2}
                 </a>
               </span>
             </p>
@@ -90,12 +93,12 @@ const Footer = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  here
+                  {lang.footerInspiration2}
                 </a>
               </span>
             </p>
             <p className='last-inspiration'>
-              and
+              {lang.footerInspiration3}
               <span className='chevron-right'>
                 <i className='las la-chevron-right'></i>
                 <a
@@ -103,7 +106,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  here
+                  {lang.footerInspiration2}
                 </a>
               </span>
             </p>

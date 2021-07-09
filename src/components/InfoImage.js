@@ -1,37 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import Counter from "./Counter";
 import circleBridge from "../img/circleBridge.jpg";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const InfoImage = () => {
   const [element, view] = useInView({ threshold: 0.4 });
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
 
   return (
     <StyledSection ref={element}>
       <div className='overlay'>
         <div className='container'>
           <div className='flex-text'>
-            <h4>Find your path</h4>
-            <p>
-              A few examples of classic (and challenging!) hiking routes in
-              Norway are Preikestolen, Trolltunga, Galdhøpiggen, Besseggen, and
-              Romsdalseggen.
-            </p>
+            <h4>{lang.infoTitle}</h4>
+            <p>{lang.infoText}</p>
           </div>
           <div className='flex-numbers'>
             <div className='numbers'>
               {view ? <Counter from={0} to={5} /> : <h4>5</h4>}
 
-              <p>Countries</p>
+              <p>{lang.info1}</p>
             </div>
             <div className='numbers'>
               {view ? <Counter from={0} to={65} /> : <h4>65</h4>}
-              <p>Trails</p>
+              <p>{lang.info2}</p>
             </div>
             <div className='numbers'>
               {view ? <Counter from={0} to={35} /> : <h4>35</h4>}
-              <p>Camps</p>
+              <p>{lang.info3}</p>
             </div>
           </div>
         </div>

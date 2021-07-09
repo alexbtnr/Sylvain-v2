@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const AboutText = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   return (
     <StyledText>
-      <h2>
-        Go hiking in 5 European countries and discover why the locals can’t get
-        enough of nature.
-      </h2>
-      <h4>Our most scenic landscapes are definitely best enjoyed on foot.</h4>
+      <h2>{lang.aboutMainText}</h2>
+      <h4>{lang.aboutSecondaryText}</h4>
     </StyledText>
   );
 };

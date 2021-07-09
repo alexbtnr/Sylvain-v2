@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 
@@ -6,8 +6,11 @@ import { contactTextAnimationWrapper, contactAnimationX } from "../animations";
 
 import { formButtonHover, formInputHover } from "../animations";
 import { useInView } from "react-intersection-observer";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const ContactForm = () => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   const controls = useAnimation();
   const [element3, view] = useInView({ threshold: 0.8 });
 
@@ -25,22 +28,19 @@ const ContactForm = () => {
         className='contact-text'
       >
         <motion.h2 variants={contactAnimationX} className='relax'>
-          Relax
+          {lang.contactText1}
         </motion.h2>
         <motion.div variants={contactAnimationX} className='no'>
           <h4>&</h4>
-          <h4>no</h4>
+          <h4>{lang.contactText2}</h4>
         </motion.div>
         <motion.h2 variants={contactAnimationX} className='stress'>
-          Stress
+          {lang.contactText3}
         </motion.h2>
       </motion.div>
       <form name='contact' method='POST' className='contact-form'>
         <input type='hidden' name='form-name' value='contact' />
-        <h4 className='contact-message'>
-          Have a message or just wanna say hi? <br /> Contact us and we'll
-          gladly answer!
-        </h4>
+        <h4 className='contact-message'>{lang.contactMsg}</h4>
         <input
           type='text'
           placeholder='Don’t fill this out if you’re human!'
@@ -55,7 +55,7 @@ const ContactForm = () => {
             type='text'
             id='name'
             name='name'
-            placeholder='Name'
+            placeholder={lang.contactPlaceholderName}
             required
           />
           <motion.input
@@ -65,7 +65,7 @@ const ContactForm = () => {
             initial='initial'
             type='text'
             name='subject'
-            placeholder='Subject'
+            placeholder={lang.contactPlaceholderSubject}
             required
           />
         </div>
@@ -89,7 +89,7 @@ const ContactForm = () => {
           id='message'
           cols='30'
           rows='10'
-          placeholder='Message'
+          placeholder={lang.contactPlaceholderMessage}
           required
         ></motion.textarea>
         <motion.input
@@ -98,7 +98,7 @@ const ContactForm = () => {
           transition={{ duration: 0.5 }}
           initial='initial'
           type='submit'
-          value='Submit'
+          value={lang.contactBtn}
           className='form-button'
         />
       </form>

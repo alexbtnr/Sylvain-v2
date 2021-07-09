@@ -1,37 +1,29 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import backgroundForest from "../img/backgroundForest.jpg";
-import MainTitle from "./MainTitle";
-import LandingForm from "./LandingForm";
 import LandingReservationsForm from "./LandingReservationsForm";
 import ScrollArrow from "./ScrollArrow";
 import { useLocation } from "react-router-dom";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const LandingReservations = ({ formList, setFormList, alert, setAlert }) => {
+  const { isRo, ro, en } = useContext(LanguageContext);
+  const lang = isRo ? ro : en;
   const location = useLocation();
 
   return (
     <StyledLanding id='showcase'>
-      {location.pathname === "/" ? (
+      {location.pathname === "/" ? null : (
         <div className='container'>
           <header className='header'>
             <Logo />
-            <Nav hrefList={["/", "#contact"]} textList={["Home", "Contact"]} />
-          </header>
-          <div className='main-content'>
-            <MainTitle />
-            <LandingForm formList={formList} setFormList={setFormList} />
-            <ScrollArrow />
-          </div>
-        </div>
-      ) : (
-        <div className='container'>
-          <header className='header'>
-            <Logo />
-            <Nav hrefList={["/", "#contact"]} textList={["Home", "Contact"]} />
+            <Nav
+              hrefList={["/", "#contact"]}
+              textList={lang.reservationsTextList}
+            />
           </header>
 
           <div className='main-content'>
