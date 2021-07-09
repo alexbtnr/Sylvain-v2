@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import backgroundForest from "../img/backgroundForest.jpg";
-import MainTitle from "./MainTitle";
-import LandingForm from "./LandingForm";
 import LandingReservationsForm from "./LandingReservationsForm";
 import ScrollArrow from "./ScrollArrow";
 import { useLocation } from "react-router-dom";
