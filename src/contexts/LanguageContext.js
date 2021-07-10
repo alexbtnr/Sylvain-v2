@@ -21,7 +21,7 @@ export const LanguageContext = createContext();
 
 class LanguageContextProvider extends Component {
   state = {
-    isRo: true,
+    isRo: false,
     ro: {
       mainTitle: `"Și în pădure mă duc, să-mi pierd mintea și să-mi găsesc sufletul."`,
       textList: ["Despre", "Povești", "Galerie", "Cazare", "Video", "Contact"],
