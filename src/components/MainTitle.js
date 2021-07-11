@@ -13,6 +13,10 @@ const MainTitle = () => {
   );
 };
 
-const StyledTitle = styled.h1``;
+const StyledTitle = styled.h1`
+  @media (max-height: 580px) {
+    display: none;
+  }
+`;
 
 export default MainTitle;
