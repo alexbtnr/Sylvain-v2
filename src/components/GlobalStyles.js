@@ -11,9 +11,14 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
   }
+  html, body {
+    overflow-x: hidden;
+
+  }
   body {
     /* background: #cfcfff; */
     background: #F2F4F5;
+    width: 100%;
 
 
     div.container {
@@ -25,17 +30,6 @@ const GlobalStyles = createGlobalStyle`
       width: 100%;
       display: block;
       object-fit: cover;
-    }
-  }
-
-  @media (max-width: 800px) {
-    
-    html,body {
-      overflow-x: hidden;
-
-    }
-    body {
-      width: 100%;
     }
   }
 `;
