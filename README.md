@@ -1,8 +1,14 @@
+# Welcome to Sylvain **Version 1.0.0**
+
 This is a website for a hiking company which allows you to book a check-in date, a check-out date and the number of persons.
 
 It was made with the purpose of showcasing various of my developer skills and adding it to my portfolio (https://alex-butnaru-portfolio.netlify.app/).
 
-It is semi-responsive, meaning it only looks good on large screens such as desktops and laptops as well as on most mobile phones. In the future I will also add styles for tablets and for smartphones landscape view.
+It is fully responsive, however, there is a bug on iPads where there are 2 constant white lines, one at the bottom of the screen and a thinner one at the right side of the screen. I still don't know what caused them or how to resolve them, but it's pretty much the only thing left to do for this site to be complete.
+
+---
+
+## Technologies used
 
 To make this web-app I've used create-react-app together with the following packages:
 - react-router-dom
@@ -14,6 +20,12 @@ To make this web-app I've used create-react-app together with the following pack
 - hamburger-react
 - uuid
 
+---
+
+## License and Copyright
+© Butnaru Alexandru, 2021
+
+---
 
 # Getting Started with Create React App
 
