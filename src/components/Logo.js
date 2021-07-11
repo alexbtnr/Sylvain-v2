@@ -26,6 +26,9 @@ const Logo = () => {
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
+  @media (max-height: 580px) {
+    margin-top: 2.5rem;
+  }
 `;
 const StyledLogo = styled(motion.div)`
   /* margin-right: 1rem; */
