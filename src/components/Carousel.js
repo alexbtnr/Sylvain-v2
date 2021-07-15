@@ -125,7 +125,7 @@ const StyledCarousel = styled.section`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     .container {
       .slider-container {
         .slick-slider {

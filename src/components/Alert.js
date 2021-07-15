@@ -41,7 +41,7 @@ const StyledAlert = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     margin-bottom: 2rem;
   }
 `;

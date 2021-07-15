@@ -45,7 +45,7 @@ const StyledContact = styled.section`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     height: 65rem;
 
     .container {

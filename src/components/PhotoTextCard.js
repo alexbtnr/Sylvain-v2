@@ -48,7 +48,7 @@ const StyledCard = styled(motion.div)`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     height: 70%;
 
     img {

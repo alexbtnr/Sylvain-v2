@@ -27,7 +27,7 @@ const StyledArrow = styled(motion.div)`
     cursor: pointer;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     display: none;
   }
 `;

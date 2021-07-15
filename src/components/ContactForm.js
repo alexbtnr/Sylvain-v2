@@ -206,7 +206,7 @@ const StyledContactForm = styled.div`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     display: block;
     margin-bottom: 5rem;
     .contact-text {

@@ -206,7 +206,7 @@ const StyledForm = styled(motion.form)`
     text-decoration: none;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     display: block;
 
     .inputs-wrap {
@@ -276,7 +276,7 @@ const SubmittedForm = styled(motion.div)`
     width: 100%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     margin-top: 1rem;
     width: 80%;
   }

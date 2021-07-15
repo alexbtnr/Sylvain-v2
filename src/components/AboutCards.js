@@ -120,7 +120,7 @@ const StyledCards = styled(motion.div)`
     font-weight: lighter;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     display: block;
     margin-bottom: 15rem;
 

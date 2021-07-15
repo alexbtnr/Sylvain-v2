@@ -221,7 +221,7 @@ const StyledFooter = styled.footer`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     .container {
       .flex-container {
         flex-direction: column;

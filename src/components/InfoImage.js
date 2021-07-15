@@ -96,7 +96,7 @@ const StyledSection = styled.section`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     height: 37rem;
     .overlay {
       .container {

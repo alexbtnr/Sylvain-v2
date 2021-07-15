@@ -67,7 +67,7 @@ const StyledLanding = styled(motion.div)`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     height: 70rem;
 
     .container {

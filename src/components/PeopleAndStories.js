@@ -84,7 +84,7 @@ const StyledStories = styled(motion.div)`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     .container {
       display: block;
       text-align: center;

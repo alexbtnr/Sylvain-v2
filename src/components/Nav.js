@@ -145,7 +145,7 @@ const StyledNav = styled(motion.nav)`
     display: none;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     div.normal-nav,
     div.normal-nav2 {
       display: none;

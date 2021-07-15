@@ -34,7 +34,7 @@ const StyledText = styled(motion.div)`
     margin-bottom: 2rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     display: block;
     margin-top: 16rem;
 

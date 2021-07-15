@@ -68,7 +68,7 @@ const StyledReservation = styled.div`
     color: #444;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     .reservations-checkin,
     .reservations-checkout,
     .reservations-hikers {

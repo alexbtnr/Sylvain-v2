@@ -101,7 +101,7 @@ const StyledVideo = styled.section`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     .content {
       min-width: 80%;
     }

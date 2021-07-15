@@ -130,7 +130,7 @@ const StyledGallery = styled(motion.section)`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     .container {
       h4 {
         position: static;

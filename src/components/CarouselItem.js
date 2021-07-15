@@ -58,7 +58,7 @@ const StyledItem = styled.div`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;

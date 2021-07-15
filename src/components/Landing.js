@@ -63,7 +63,7 @@ const StyledLanding = styled(motion.div)`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     .container {
       .main-content {
         margin-top: 3rem;

@@ -258,7 +258,7 @@ const StyledForm = styled(motion.form)`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     flex-direction: column;
     /* max-width: 60%; */
     justify-content: center;

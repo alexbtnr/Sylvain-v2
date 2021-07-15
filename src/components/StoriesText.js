@@ -32,7 +32,7 @@ const StyledStoriesText = styled(motion.div)`
     font-size: 1.1rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     padding-bottom: 2rem;
   }
 `;
